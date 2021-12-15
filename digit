@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int ndigit(int x)
+{
+	int digit_count = 0;
+	if (x == 0)
+		return 1;
+	while (x != 0) {
+		++digit_count;
+		x /= 10;
+	}
+	return digit_count;
+}
+int main(void)
+{
+	int number;
+	printf("get a number: ");
+	scanf("%d", &number);
+	int digit_count = ndigit(number);
+	printf("\n\n");
+	printf("digit count: %d", digit_count);
+}
